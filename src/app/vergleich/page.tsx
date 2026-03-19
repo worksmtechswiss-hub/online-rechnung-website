@@ -59,12 +59,13 @@ const competitors: { name: string; highlight: boolean; tagline: string; target: 
 ];
 
 function Cell({ value, highlight }: { value: string | boolean; highlight: boolean }) {
+  const cellBg = highlight ? { backgroundColor: "rgba(108,78,169,0.07)" } : {};
   if (typeof value === "boolean") {
     return (
-      <td className="px-4 py-3.5 text-center">
+      <td className="px-4 py-3.5 text-center" style={cellBg}>
         {value ? (
-          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full" style={{ backgroundColor: highlight ? "rgba(255,255,255,0.2)" : "#e8e1f5" }}>
-            <svg className="w-3.5 h-3.5" style={{ color: highlight ? "white" : "#6c4ea9" }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full" style={{ backgroundColor: highlight ? "#6c4ea9" : "#e8e1f5" }}>
+            <svg className="w-3.5 h-3.5" style={{ color: "white" }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
           </span>
         ) : (
           <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
@@ -75,7 +76,7 @@ function Cell({ value, highlight }: { value: string | boolean; highlight: boolea
     );
   }
   return (
-    <td className="px-4 py-3.5 text-center text-sm font-medium" style={{ color: highlight ? "rgba(255,255,255,0.95)" : "#374151" }}>
+    <td className="px-4 py-3.5 text-center text-sm font-medium" style={{ ...cellBg, color: highlight ? "#6c4ea9" : "#374151" }}>
       {value}
     </td>
   );
