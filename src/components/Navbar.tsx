@@ -7,8 +7,7 @@ const navLinks = [
   { href: "/qr-rechnung", label: "QR-Rechnung" },
   { href: "/freelancer", label: "Freelancer" },
   { href: "/kmu", label: "KMU" },
-  { href: "/preise", label: "Preise" },
-  { href: "/blog", label: "Blog" },
+  { href: "/vergleich", label: "Vergleich" },
 ];
 
 const REGISTER_URL = "https://app.finitopro.ch/register";
@@ -104,7 +103,6 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-                style={{ ["--hover-color" as string]: "#6c4ea9" }}
               >
                 {link.label}
               </Link>

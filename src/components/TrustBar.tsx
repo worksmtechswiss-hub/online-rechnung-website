@@ -1,8 +1,8 @@
 const stats = [
-  { value: "5'000+", label: "Schweizer Nutzer" },
   { value: "120'000+", label: "erstellte Rechnungen" },
   { value: "100%", label: "QR-konform" },
   { value: "4.9 ★", label: "Durchschnittsbewertung" },
+  { value: "CHF 0", label: "Einstieg kostenlos" },
 ];
 
 export default function TrustBar() {
@@ -15,7 +15,7 @@ export default function TrustBar() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
+              <div className="text-2xl sm:text-3xl font-bold mb-1" style={{ color: "#6c4ea9" }}>
                 {stat.value}
               </div>
               <div className="text-sm text-gray-500">{stat.label}</div>

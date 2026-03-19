@@ -9,20 +9,10 @@ const links = {
     { href: "/qr-rechnung", label: "QR-Rechnung" },
     { href: "/freelancer", label: "Für Freelancer" },
     { href: "/kmu", label: "Für KMU" },
-    { href: "/preise", label: "Preise" },
-    { href: "/vorlagen", label: "Rechnungsvorlagen" },
     { href: "/vergleich", label: "Vergleich" },
-  ],
-  Ressourcen: [
-    { href: "/blog", label: "Blog" },
-    { href: "/#faq", label: "FAQ" },
-    { href: "/blog/rechnung-schreiben-schweiz", label: "Rechnung schreiben" },
-    { href: "/blog/qr-rechnung-pflichtangaben", label: "Pflichtangaben" },
-    { href: "/blog/mwst-rechnung-schweiz", label: "MWST Rechnung" },
   ],
   Rechtliches: [
     { href: "/datenschutz", label: "Datenschutz" },
-    { href: "/agb", label: "AGB" },
     { href: "/impressum", label: "Impressum" },
     { href: "/cookies", label: "Cookie-Richtlinie" },
   ],
@@ -34,7 +24,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
-          <div>
+          <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg mb-4">
               <span
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
@@ -44,9 +34,9 @@ export default function Footer() {
               </span>
               Finitopro
             </Link>
-            <p className="text-sm leading-relaxed mb-4">
+            <p className="text-sm leading-relaxed mb-4 max-w-xs">
               Die einfachste Rechnungssoftware für Schweizer Freelancer und KMU.
-              QR-konform, MWST-korrekt, kostenlos.
+              QR-konform, MWST-korrekt, kostenlos starten.
             </p>
             <a
               href={REGISTER_URL}
@@ -86,7 +76,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(108,78,169,0.2)" }}
         >
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
-            © {new Date().getFullYear()} Finitopro – online-rechnung-erstellen.ch · Alle Rechte vorbehalten
+            © {new Date().getFullYear()} Finitopro / SM Tech GmbH Swiss – online-rechnung-erstellen.ch
           </p>
           <div className="flex items-center gap-1 text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#72bf78" }} />
