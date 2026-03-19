@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Rechnung erstellen Schweiz – einfach, schnell & QR-konform. Für Freelancer und KMU. Kostenlos starten.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://finitopro.ch/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Finitopro – Online Rechnung erstellen Schweiz",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Online Rechnung erstellen – Kostenlos & QR-konform",
     description:
       "Rechnung erstellen Schweiz – einfach, schnell & QR-konform. Für Freelancer und KMU.",
-    images: ["/og-image.jpg"],
+    images: ["https://finitopro.ch/og-image.jpg"],
   },
   robots: {
     index: true,
