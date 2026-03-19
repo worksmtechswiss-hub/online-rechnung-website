@@ -14,7 +14,6 @@ const links = {
   Rechtliches: [
     { href: "/datenschutz", label: "Datenschutz" },
     { href: "/impressum", label: "Impressum" },
-    { href: "/cookies", label: "Cookie-Richtlinie" },
   ],
 };
 

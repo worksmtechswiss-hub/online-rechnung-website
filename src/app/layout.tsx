@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -80,6 +81,13 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${outfit.variable} h-full scroll-smooth antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-gray-900">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LXXLJFHGC6" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LXXLJFHGC6');
+        `}</Script>
         {children}
       </body>
     </html>
